@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="dato1 " id="dato1">
+        <input type="text" name="entra" id="entra">
+        <button type="button" onclick="a()">Agrega</button>
+    </form>
+
+    <form action="" name="dato2" id="dato2">
+        <input type="text" name="busca" id="busca">
+        <button type="button" onclick="b()">Busca</button>
+    </form>
+
+    <script>
+        let miA = [];
+
+        function a() {
+            let valor = document.getElementById('entra').value;
+            miA.push(valor);
+            console.log("Dato es", miA);
+        }
+
+        function b() {
+            let busca = document.getElementById('busca').value;
+            
+            if (miA.includes(busca)) {
+                console.log("Encontrado");
+            } else {
+                console.log("No encontrado");
+            }
+        }
+    </script>
+</body>
+</html>
