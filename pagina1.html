@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 1</title>
+</head>
+<body>
+    <h1>Números</h1>
+    <br><br>
+  
+    <input  id="num1" ><br>
+    <input  id="num2" ><br>
+    <input  id="num3" ><br>
+    <br>
+    
+    <button onclick="guardar()">Guardar números</button>
+    <button onclick="mayor()">Ver número mayor</button>
+
+    <script>
+        let numeros = [];
+
+        function guardar() {
+            let n1 = Number(document.getElementById('num1').value);
+            let n2 = Number(document.getElementById('num2').value);
+            let n3 = Number(document.getElementById('num3').value);
+            
+            numeros = [n1, n2, n3];
+         
+        }
+
+        function mayor() {
+            if (numeros.length > 0) {
+                let maximo = numeros[0];
+                
+                if (numeros[1] > maximo) {
+                    maximo = numeros[1];
+                }
+                
+                if (numeros[2] > maximo) {
+                    maximo = numeros[2];
+                }
+                
+                console.log("El número mayor es:", maximo);
+            }   
+        }
+    </script>
+</body>
+</html
